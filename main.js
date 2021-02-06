@@ -233,5 +233,5 @@ serv.post('/memoModifier.ejs', function (req, res) {
   });
 });
 
-serv.listen(11102);
+serv.listen(process.env.PORT || 3306);
 // console.log("Accès au site: localhost:8080/");
