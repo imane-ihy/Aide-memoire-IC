@@ -6,15 +6,13 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
+    "body-parser": "1.19.0",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "4.17.1",
     "hbs": "~4.0.4",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "node-sass-middleware": "0.11.0",
+    "mysql": "2.18.1",
+    "password-hash": "1.2.2",
     "pg": "^8.4.0",
-    "pg-hstore": "^2.3.3",
-    "sequelize": "^6.3.5"
+    "pg-hstore": "^2.3.3"
   }
 }
