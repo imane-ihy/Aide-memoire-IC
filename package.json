@@ -1,5 +1,5 @@
 {
-  "name": "heroku.nodejs",
+  "name": "aide-memoire",
   "version": "1.0.0",
   "private": true,
   "scripts": {
