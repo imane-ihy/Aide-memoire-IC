@@ -31,9 +31,9 @@ serv.use(express.static(__dirname + '/'));
 // Création de la base de données et des tables
 con.connect(function (erreur) {
   if (erreur) throw erreur;
-  con.query("CREATE DATABASE IF NOT EXISTS aide_memoire", function (erreur, resultat) {
+  con.query("CREATE DATABASE IF NOT EXISTS mtn0pupejwj1qvkb", function (erreur, resultat) {
     if (erreur) throw erreur;
-    console.log("Base aide_memoire créée");
+    console.log("Base mtn0pupejwj1qvkb créée");
   });
   con.query("CREATE TABLE IF NOT EXISTS utilisateur (id_utilisateur INT AUTO_INCREMENT PRIMARY KEY, pseudo VARCHAR(255) NOT NULL UNIQUE, mdp VARCHAR(255) NOT NULL, mail VARCHAR(255) NOT NULL UNIQUE)", function (erreur, resultat) {
     if (erreur) throw erreur;
@@ -233,5 +233,5 @@ serv.post('/memoModifier.ejs', function (req, res) {
   });
 });
 
-serv.listen(3306);
+serv.listen(8080);
 // console.log("Accès au site: localhost:8080/");
