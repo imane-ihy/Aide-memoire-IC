@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Aide-mémoire partagé</title>
+    <script src="../jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Aide-mémoire partagé</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="memo.ejs">Nouveau memo</a></li>
+        <li><a href="mesMemos.ejs">Mes memos</a></li>
+        <li><a href="deconnexion.ejs">Deconnexion</a></li>
+    </nav>
+    
+    <h2>Les memos de <%= pseudo %></h2>
+    <form id ="formulaire" action="memo.ejs" method="post">
+      <p>Titre</p> <input type="text" name="titre"><br>
+      <p>Memo</p> <textarea name="memo" rows="10" cols="70"></textarea><br><br>
+      <p>Partage avec au moins 2 personnes (pas obligatoire)</p> <br>
+      <select name="partage" multiple="yes">
+        <%for (i = 0; i < utilisateurs.length; i++) {%>
+          <option><%= utilisateurs[i].pseudo %></option>
+        <%}%>
+      </select><br>
+      <button type="submit" name="enregistrer">Enregistrer</button>
+    </form>
+  </body>
+</html>

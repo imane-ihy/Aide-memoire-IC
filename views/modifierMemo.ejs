@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Aide-mémoire partagé</title>
+    <script src="../jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <h2>Les memos de <%= pseudo %></h2>
+    <form id="formulaire" action="memoModifier.ejs" method="post">
+      <p>Titre</p> <input type="text" name="titre2" value=<%=result2[0].titre%>><br>
+      <p>Memo</p> <textarea name="memo2" rows="10" cols="70"><%=result2[0].memo%></textarea>
+      <input type="hidden" name="id_memo" value=<%= result2[0].id_memo%>>
+      <button type="submit" name="enregistrer">Enregistrer</button>
+    </form>
+  </body>
+</html>

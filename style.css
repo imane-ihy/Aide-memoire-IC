@@ -1,0 +1,74 @@
+p,h1,h2,h3,h4,h5,div{
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  text-align: center;
+}
+
+nav{
+  list-style:none;
+	background: #ffbf80;
+  text-align:center;
+}
+nav li{
+  display:inline;
+}
+nav li a{
+	display:inline-block;
+	color:#b33c00; !important
+	text-align: center;
+	padding: 1% 3% 1% 3%;
+  text-decoration: none;
+	font-size: 120%; !important
+	margin-left: 1em;
+	margin-right: 1em;
+}
+nav li a:hover{
+  background:#b33c00;
+	color: white;
+}
+
+button{
+	font-size: 15px;
+	padding-left: 5%;
+	padding-right: 5%;
+	color: white;
+	background: #C5CFF1;
+	border-color: #335EC7;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#mesMemos {
+	text-align: center;
+}
+
+#erreurConnexion{
+	text-align: center;
+	color: red;
+}
+
+#formulaire{
+	text-align: left;
+	font-size: 120%;
+	border: 1px solid black;
+	height: auto;
+	width: 25%;
+	padding: 5%;
+	align-self: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#formulaire p{
+	font: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, "sans-serif";
+	margin-bottom: 0%;
+	margin-top: 0%;
+}
+#formulaire input{
+	width: 100%;
+	margin-bottom: 13%;
+	height: 30px;
+}
+
+#formulaire a{
+	font-size: 60%;
+}

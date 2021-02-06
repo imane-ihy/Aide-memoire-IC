@@ -1,0 +1,85 @@
+IHYATEN Imane (21602301)
+
+Programmation Web
+Devoir maison: Aide-mémoire partagé
+Années 2019-2020
+
+* Présentation:
+Le site est un aide-mémoire qui permet à un utilisateur de créer un mémo qu'il peut partager
+ou non. Lorsqu'il ouvre le site il peut se connecter ou s'inscrire. Une fois connecté,
+l'utilisateur peut écrire un memo, voir ses memos, les supprimer, les modifier ou voir les
+memos qui ont été partagé avec lui.
+L'utilisateur qui veut ajouter un memos peut le partagé avec au moins 2 personnes ou ne pas le
+partager.
+A chaque étape, un message s'affiche sur le terminal.
+
+
+* Mode d'emploi:
+Préparation de la base de données:
+-> Modifier les lignes 9 (host), 10 (user) et 11 (password) si nécessaire
+-> Mettre la ligne 8 (database) en commentaire, lancer le projet comme ci-dessous, enlever le
+   commentaire et relancer pour créer la base de données.
+
+Le projet peut être lancé en exécutant l'une des commandes suivantes:
+node main.js
+ou
+nodemon main.js
+
+Puis ouvrir localhost:8080/ sur un navigateur.
+
+
+* Mes choix:
+Pages:
+Toutes ces pages sont dans un fichier "views".
+- "accueil.ejs": Page sur laquelle le site s'ouvre. L'utilisateur peut soit se connecter, soit
+  s'inscrire.
+- "inscription.ejs": Page grâce à laquelle l'utilisateur peut s'inscrire. Il peut pour cela
+  entrer un pseudo, un mot de passe (et le confirmer), ainsi qu'une adresse mail.
+- "connexion.ejs": Page qui permet la connexion de l'utilisateur avec son pseudo et son mot de
+  passe.
+- "accueilConnecte.ejs": Page sur laquelle l'utilisateur est redirigé une fois connecté. Il
+  peut écrire un nouveau memo, voir ses memos ou se déconnecter. Ces options sont disponibles
+  sur toutes les pages lorsque celui-ci est conecté.
+- "memo.ejs": Page où l'utilisateur peut écrire son memo. Il doit lui donner un titre et s'il
+  le souhaite il peut partager son memo avec 2 personnes minimum ou ne pas le faire. Cette
+  page n'est accessible que si l'utilisateur est connecté sinon il est redirigé vers la page
+  de connexion.
+- "mesMemos.ejs": Page où l'utilisateur a accès à ses memos ainsi qu'aux memos qui ont été
+  partagé avec lui. Il peut supprimer ou modifier ses memos depuis cette page. En revanche,
+  les memos partagés ne sont pas modifiables. Cette page n'est accessible que si l'utilisateur
+  est connecté sinon il est redirigé vers la page de connexion.
+- "modifierMemo.ejs": Page depuis laquelle l'utilisateur peut modifier son memo.
+
+Langages:
+- HTML: Pas utilisé car je préférai pouvoir mélanger du HTML et du Embedded JavaScript.
+- Embedded JavaScript: Les pages sont écrites dans ce langage pour pouvoir inclure et
+  interpréter du Javascript aux fichiers.
+- MySQL: J'ai créé une base de données "aide_memoire" qui comporte 3 tables. Une table
+  "utilisateur" qui regroupe les informations concernant l'utilisateur, c'est-à-dire son
+  pseudo (pseudo) qui est unique, son mot de passe (mdp) qui est haché, son adresse mail (mail)
+  et un identifiant (id_utilisateur clé primaire) qui est un entier auto-incrémenté. Une table
+  "memo" qui contient le titre (titre) du memo, son contenu (memo) ainsi que l'identifiant du
+  memo (id_memo clé primaire) représenter par un entier auto-incrémenté et l'identifiant de
+  l'utilisateur (id_utilisateur clé étrangère faisant référence à utilisateur(id_utilisateur)).
+  Une table "partage" qui permet de gérer le partage des memos avec l'identifiant du memo
+  partagé (memo clé étrangère faisant référence à memo(id_memo)) et celui de l'utilisateur
+  avec lequel ce memo est partagé (utilisateur clé étrangère faisant référence à utilisateur
+  (id_utilisateur)).
+- CSS: J'ai préféré faire un seule fichier regroupant tout le style du site (style.css).
+- JavaScript (jQuery): Peu utilisé seulement dans "connexion.ejs" et "inscription.ejs"
+
+Modules:
+- express: Utilisé pour le serveur (serv)
+- express-session: Utilisé pour la création de session, après avoir utilisé avec cookie-session
+- mysql: Utilisé pour la base de données
+- body-parser: Utilisé pour récupérer les informations des formulaires.
+- password-hash: Utilisé pour hacher le mot de passe, au début je pensais utiliser bcrypt
+  mais je n'arrivais pas à l'installer et password-hash était assez simple à utiliser.
+- ejs: Utilisé pour mélanger du HTML et du JavaScript plus facilement.
+
+
+* Problèmes rencontrés:
+Je ne savais pas aussi quels modules utilisés au début car je n'avais pas compris comment
+fonctionnait nodeJS. J'ai aussi eu du mal à installer des modules comme expliqué précédemment.
+J'ai eu quelques problèmes avec JavaScript (jQuery), c'est la raison pour laquelle, il y a
+très peu de code dans ce langage.

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Aide-mémoire partagé</title>
+    <script src="../jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Aide-mémoire partagé</h1>
+    </header>
+
+    <form id="formulaire" action="inscription.ejs" method="post">
+      <p>Pseudo</p> <input type="text" name="pseudo"><br>
+      <p>Mot de passe</p> <input type="password" name="mdp"><br>
+      <p>Confirmez votre mot de passe</p> <input type="password" name="mdp2"><br>
+      <p>Mail</p> <input type="email" name="mail">
+      <button type="submit" name="inscription">Valider</button>
+      <button type="button" id="connexion">Connexion</button>
+    </form>
+    
+    <script>
+      $("#connexion").click(function(){
+        window.location.replace("connexion.ejs");
+      });
+    </script>
+  </body>
+</html>

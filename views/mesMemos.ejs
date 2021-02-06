@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/style.css">
+
+  </head>
+
+  <body>
+    <header>
+      <h1>Aide-mémoire partagé</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="memo.ejs">Nouveau memo</a></li>
+        <li><a href="mesMemos.ejs">Mes memos</a></li>
+        <li><a href="deconnexion.ejs">Déconnexion</a></li>
+      </ul>
+    </nav>
+
+    <h2>Mes memos</h2>
+    <%for (i = 0; i < res2.length; i++) { %>
+      <article id="mesMemos">
+        <h3><%= res2[i].titre%></h3>
+        <p><%= res2[i].memo %></p>
+        <form action="supprimerMemo.ejs" method="post">
+          <input type="hidden" name="id_memo" value=<%= res2[i].id_memo%>>
+          <button type="submit" name="supprimer">Supprimer</button><br>
+        </form>
+        <form action="modifierMemo.ejs" method="post">
+          <input type="hidden" name="id_memo" value=<%= res2[i].id_memo%>>
+          <button type="submit" name="modifier">Modifier</button><br><br>
+        </form>
+      </article>
+    <%}%>
+    
+    <br><br>
+    <h2>Mes memos partagés</h2>
+        <%for (i = 0; i < res3.length; i++) { %>
+          <article id="mesMemos">
+            <h3><%= res3[i].titre%></h3>
+            <p><%= res3[i].memo %></p>
+            <p><span style="text-decoration:underline">Partagé par :</span> <%= res3[i].pseudo %></p>
+          </article>
+        <%}%>
+
+  </body>
+</html>
