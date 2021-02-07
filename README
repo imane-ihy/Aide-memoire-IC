@@ -24,7 +24,6 @@ nodemon main.js
 
 
 
-* Mes choix:
 Pages:
 Toutes ces pages sont dans un fichier "views".
 - "accueil.ejs": Page sur laquelle le site s'ouvre. L'utilisateur peut soit se connecter, soit
@@ -47,10 +46,9 @@ Toutes ces pages sont dans un fichier "views".
 - "modifierMemo.ejs": Page depuis laquelle l'utilisateur peut modifier son memo.
 
 Langages:
-- HTML: Pas utilisé car je préférai pouvoir mélanger du HTML et du Embedded JavaScript.
 - Embedded JavaScript: Les pages sont écrites dans ce langage pour pouvoir inclure et
   interpréter du Javascript aux fichiers.
-- MySQL: J'ai créé une base de données "aide_memoire" qui comporte 3 tables. Une table
+- MySQL: Nous avons créé une base de données "aide_memoire" qui comporte 3 tables. Une table
   "utilisateur" qui regroupe les informations concernant l'utilisateur, c'est-à-dire son
   pseudo (pseudo) qui est unique, son mot de passe (mdp) qui est haché, son adresse mail (mail)
   et un identifiant (id_utilisateur clé primaire) qui est un entier auto-incrémenté. Une table
@@ -61,7 +59,7 @@ Langages:
   partagé (memo clé étrangère faisant référence à memo(id_memo)) et celui de l'utilisateur
   avec lequel ce memo est partagé (utilisateur clé étrangère faisant référence à utilisateur
   (id_utilisateur)).
-- CSS: J'ai préféré faire un seule fichier regroupant tout le style du site (style.css).
+- CSS: Nous avons préféré faire un seule fichier regroupant tout le style du site (style.css).
 - JavaScript (jQuery): Peu utilisé seulement dans "connexion.ejs" et "inscription.ejs"
 
 Modules:
@@ -69,6 +67,5 @@ Modules:
 - express-session: Utilisé pour la création de session, après avoir utilisé avec cookie-session
 - mysql: Utilisé pour la base de données
 - body-parser: Utilisé pour récupérer les informations des formulaires.
-- password-hash: Utilisé pour hacher le mot de passe, au début je pensais utiliser bcrypt
-  mais je n'arrivais pas à l'installer et password-hash était assez simple à utiliser.
+- password-hash: Utilisé pour hacher le mot de passe
 - ejs: Utilisé pour mélanger du HTML et du JavaScript plus facilement.
