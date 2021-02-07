@@ -7,9 +7,24 @@ l'utilisateur peut écrire un memo, voir ses memos, les supprimer, les modifier 
 memos qui ont été partagé avec lui.
 L'utilisateur qui veut ajouter un memos peut le partagé avec au moins 2 personnes ou ne pas le
 partager.
-A chaque étape, un message s'affiche sur la console.
+A chaque étape, un message s'affiche sur le terminal.
 
 
+* Mode d'emploi:
+Préparation de la base de données:
+-> Modifier les lignes 9 (host), 10 (user) et 11 (password) si nécessaire
+-> Mettre la ligne 8 (database) en commentaire, lancer le projet comme ci-dessous, enlever le
+   commentaire et relancer pour créer la base de données.
+
+Le projet peut être lancé en exécutant l'une des commandes suivantes:
+node main.js
+ou
+nodemon main.js
+
+
+
+
+* Mes choix:
 Pages:
 Toutes ces pages sont dans un fichier "views".
 - "accueil.ejs": Page sur laquelle le site s'ouvre. L'utilisateur peut soit se connecter, soit
