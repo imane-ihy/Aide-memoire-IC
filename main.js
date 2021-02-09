@@ -6,10 +6,10 @@ var bodyParser = require('body-parser');
 var mdpHash = require('password-hash');
 
 var con = mysql.createConnection({
-  database : 'mtn0pupejwj1qvkb',
-  host : 'esilxl0nthgloe1y.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',
-  user : 'i24s64rvoxy5nhce',
-  password : 'yjil0tsu3qhkklfi'
+  database : 'aide_memoire',
+  host : 'localhost',
+  user : 'root',
+  password : 'root'
 });
 
 serv.set('view engine', 'ejs');
